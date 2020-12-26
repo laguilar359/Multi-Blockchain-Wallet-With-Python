@@ -55,7 +55,7 @@ w3.eth.getBalance("0xd171309493a7Cfa5f92011d8E5f29Cf746959276")
 
 
 # Navigate to parent folder where 'wallet' directory is located
-os.chdir(r'/Users/luisaguilar/Fintech_Bootcamp/wallet')
+os.chdir(r'/Users/luisaguilar/Fintech_Bootcamp/Multi-Blockchain-Wallet-With-Python/wallet')
 
 
 # In[7]:
@@ -155,14 +155,14 @@ def priv_key_to_account(coin, priv_key):
 
 
 # Create a 'priv_key' object using the 'coins' object to pull the coin's 'privkey' address
-priv_key = coins['eth'][0]['privkey']
+priv_key = coins['btc-test'][0]['privkey']
 
 
 # In[17]:
 
 
 # Create an 'account' signers object for the 'ETH' 'privkey' using the 'priv_key_to_account' function.
-account = priv_key_to_account(ETH, priv_key)
+account = priv_key_to_account(BTCTEST, priv_key)
 
 
 # In[18]:
@@ -220,7 +220,7 @@ amount = 0.01
 
 
 # state the 'to' recipient address
-to = "0xd171309493a7Cfa5f92011d8E5f29Cf746959276"
+to = "mxwSU31v1NtbUi6Pc5bN9BgmmAGw13JdvX"
 
 
 # In[26]:
@@ -261,7 +261,7 @@ def send_tx(account, recipient, amount):
 # In[28]:
 
 
-private_key = coins['eth'][0]['privkey']
+private_key = coins['btc-test'][0]['privkey']
 
 
 # In[29]:
@@ -279,7 +279,7 @@ account_one
 # In[35]:
 
 
-send_tx(account_one, to, 3)
+send_tx(account, to, 1)
 
 
 # In[ ]:
